@@ -27,6 +27,9 @@ namespace hello_world
             manager.Touchpad.SetWindow(this, Touchpad.RenderMethod.Polling);
 
             /* Here are some dynamic keys I made for Razer Calculator
+             * I enable them with parameters of the Dynamic Key I want to 
+             * enable, a method I want to 'callback' to when it's pressed
+             * and the key I want to show.
              */
             manager.EnableDynamicKey(RazerAPI.DynamicKeyType.DK1, OnPlusPress,
               @"Default\Images\PlusDK.png");
@@ -41,22 +44,22 @@ namespace hello_world
 
         private void OnDividePress(object sender, System.EventArgs e)
         {
-            throw new System.NotImplementedException();
+            SharpBladeTextBlock.Text = "Divide Pressed";
         }
 
         private void OnMultiplyPress(object sender, System.EventArgs e)
         {
-            throw new System.NotImplementedException();
+            SharpBladeTextBlock.Text = "Multiply Pressed";
         }
        
         private void OnMinusPress(object sender, System.EventArgs e)
         {
-            throw new System.NotImplementedException();
+            SharpBladeTextBlock.Text = "Minus Pressed";
         }
 
         private void OnPlusPress(object sender, System.EventArgs e)
         {
-            throw new System.NotImplementedException();
+            SharpBladeTextBlock.Text = "Plus Pressed";
         }
 
         /// <summary>

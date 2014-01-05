@@ -5,6 +5,6 @@
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="0,62,0,0" TextWrapping="Wrap" Text="Hello World" TextAlignment="Center" VerticalAlignment="Top" Height="90" Width="800" FontSize="60" Foreground="White"/>
         <Image HorizontalAlignment="Left" Height="212" Margin="298,152,0,0" VerticalAlignment="Top" Width="200" Source="Default/Images/SharpBlade.png"/>
-        <TextBlock HorizontalAlignment="Left" Margin="0,364,0,0" TextWrapping="Wrap" Text="Powered by SharpBlade" TextAlignment="Center" VerticalAlignment="Top" Height="90" Width="800" FontSize="40" Foreground="White"/>
+        <TextBlock Name="SharpBladeTextBlock"  HorizontalAlignment="Left" Margin="0,364,0,0" TextWrapping="Wrap" Text="Powered by SharpBlade" TextAlignment="Center" VerticalAlignment="Top" Height="90" Width="800" FontSize="40" Foreground="White"/>
     </Grid>
 </Window>
