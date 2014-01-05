@@ -8,10 +8,17 @@ SharpBlade Library
 
 SharpBlade is a C# wrapper/implementation for the SwitchBlade UI API.  It's built using the SwitchBlade UI SDK from Razer.
 
-Implementation
---------------
+Usage
+-----
 
-For this example project, I am simplifying the usage of SharpBlade by including a static build of it from the latest commit of today (5th January 2014) which is [896c0a24861d650977785515fa1310d7f8f8a2af][publishcommit]
+For this example project, I am simplifying the usage of SharpBlade by including a static build of it from the latest commit of today (5th January 2014) which is [896c0a24861d650977785515fa1310d7f8f8a2af][publishcommit].
+
+I've commented the code heavily with explanations on using the application.
+
+Discussion
+----------
+
+If you'd like to discuss anything about this example project, please visit the [SBUI Example Project][razerexampleproject] on the Razer Developer Forums.
 
 License
 -------
@@ -44,3 +51,4 @@ SwitchBlade UI SDK is provided by Razer and [can be obtained from their website]
 [l4n]: http://logging.apache.org/log4net/
 [sbs]: https://github.com/Sharparam/SwitchBladeSteam
 [publishcommit]: https://github.com/SharpBlade/SharpBlade/commit/896c0a24861d650977785515fa1310d7f8f8a2af
+[razerexampleproject]: http://developer.razerzone.com/forum/showthread.php?121-SBUI-Example-Project-using-SharpBlade
