@@ -1,4 +1,4 @@
-﻿<Window x:Class="hello_world.MainWindow"
+﻿<Window x:Class="SharpBlade.HelloWorld.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="520" Width="800" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="Manual" Left="-99999" Top="-99999" ShowActivated="False" ShowInTaskbar="False" Background="#FF470747">

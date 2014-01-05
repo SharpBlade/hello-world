@@ -3,7 +3,7 @@ using Sharparam.SharpBlade;
 using Sharparam.SharpBlade.Native;
 using Sharparam.SharpBlade.Razer;
 
-namespace hello_world
+namespace SharpBlade.HelloWorld
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
