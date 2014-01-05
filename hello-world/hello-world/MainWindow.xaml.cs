@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using Sharparam.SharpBlade;
+using Sharparam.SharpBlade.Native;
+using Sharparam.SharpBlade.Razer;
 
 namespace hello_world
 {
@@ -22,7 +12,69 @@ namespace hello_world
     {
         public MainWindow()
         {
+            //Init XAML
             InitializeComponent();
+            //Create SharpBlade RazerManager object
+            RazerManager manager = new RazerManager();
+
+            //Add the event for checking the App Status
+            manager.AppEvent += OnAppEvent;
+
+            /* This sends the current window to the SBUI
+             * We give it the Polling RenderMethod which updates
+             * SBUI every 42ms (about 24FPS)
+             */
+            manager.Touchpad.SetWindow(this, Touchpad.RenderMethod.Polling);
+
+            /* Here are some dynamic keys I made for Razer Calculator
+             */
+            manager.EnableDynamicKey(RazerAPI.DynamicKeyType.DK1, OnPlusPress,
+              @"Default\Images\PlusDK.png");
+            manager.EnableDynamicKey(RazerAPI.DynamicKeyType.DK2, OnMinusPress,
+               @"Default\Images\MinusDK.png");
+            manager.EnableDynamicKey(RazerAPI.DynamicKeyType.DK3, OnMultiplyPress,
+               @"Default\Images\MultiplyDK.png");
+            manager.EnableDynamicKey(RazerAPI.DynamicKeyType.DK4, OnDividePress,
+               @"Default\Images\DivideDK.png");
+
+        }
+
+        private void OnDividePress(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void OnMultiplyPress(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+       
+        private void OnMinusPress(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void OnPlusPress(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// This event handler is fired when an app event happens
+        /// </summary>
+        /// <param name="sender">The object that called this event</param>
+        /// <param name="appEventArgs">The arguments that give details as to the app event</param>
+        void OnAppEvent(object sender, Sharparam.SharpBlade.Razer.Events.AppEventEventArgs appEventArgs)
+        {
+            /* Just an example here.  If the app becomes deactivated, is closed or force quit, then close the app.
+             * Potentially you could run a App Lifecycle here where when it's deactivated, it unbinds any data connection
+             * And when the app is activated again, it reloads the data source and opens back up
+             */
+            if (appEventArgs.Type == RazerAPI.AppEventType.Deactivated || appEventArgs.Type == RazerAPI.AppEventType.Close ||
+                appEventArgs.Type == RazerAPI.AppEventType.Exit)
+            {
+                Application.Current.Shutdown();
+            }
         }
     }
 }

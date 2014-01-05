@@ -34,6 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\SharpBlade\Sharparam.SharpBlade\bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Sharparam.SharpBlade">
+      <HintPath>..\..\..\SharpBlade\Sharparam.SharpBlade\bin\Debug\Sharparam.SharpBlade.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
