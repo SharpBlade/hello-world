@@ -1,0 +1,10 @@
+﻿<Window x:Class="hello_world.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="520" Width="800" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="Manual" Left="-99999" Top="-99999" ShowActivated="False" ShowInTaskbar="False" Background="#FF470747">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="0,62,0,0" TextWrapping="Wrap" Text="Hello World" TextAlignment="Center" VerticalAlignment="Top" Height="90" Width="800" FontSize="60" Foreground="White"/>
+        <Image HorizontalAlignment="Left" Height="212" Margin="298,152,0,0" VerticalAlignment="Top" Width="200" Source="Default/Images/SharpBlade.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,364,0,0" TextWrapping="Wrap" Text="Powered by SharpBlade" TextAlignment="Center" VerticalAlignment="Top" Height="90" Width="800" FontSize="40" Foreground="White"/>
+    </Grid>
+</Window>
