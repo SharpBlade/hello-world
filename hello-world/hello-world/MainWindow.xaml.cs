@@ -14,27 +14,25 @@ namespace SharpBlade.HelloWorld
         {
             //Init XAML
             InitializeComponent();
-            //Create SharpBlade RazerManager object
-            var manager = Switchblade.Instance;
+
+            //Get Switchblade instance
+            ISwitchblade sbInstance = Switchblade.Instance;
 
             //Add the event for checking the App Status
-            manager.AppEvent += OnAppEvent;
+            sbInstance.AppEvent += OnAppEvent;
 
-            /* This sends the current window to the SBUI
-             * We give it the Polling RenderMethod which updates
-             * SBUI every 42ms (about 24FPS)
-             */
-            manager.Touchpad.Set(this);
+            // This sends the current window to the SBUI
+            sbInstance.Touchpad.Set(this);
 
             /* Here are some dynamic keys I made for Razer Calculator
              * I enable them with parameters of the Dynamic Key I want to 
              * enable, a method I want to 'callback' to when it's pressed
              * and the key I want to show.
              */
-            manager.DynamicKeys.Enable(DynamicKeyType.DK1, OnPlusPress, @"Default\Images\PlusDK.png");
-            manager.DynamicKeys.Enable(DynamicKeyType.DK2, OnMinusPress, @"Default\Images\MinusDK.png");
-            manager.DynamicKeys.Enable(DynamicKeyType.DK3, OnMultiplyPress, @"Default\Images\MultiplyDK.png");
-            manager.DynamicKeys.Enable(DynamicKeyType.DK4, OnDividePress, @"Default\Images\DivideDK.png");
+            sbInstance.DynamicKeys.Enable(DynamicKeyType.DK1, OnPlusPress, @"Default\Images\PlusDK.png");
+            sbInstance.DynamicKeys.Enable(DynamicKeyType.DK2, OnMinusPress, @"Default\Images\MinusDK.png");
+            sbInstance.DynamicKeys.Enable(DynamicKeyType.DK3, OnMultiplyPress, @"Default\Images\MultiplyDK.png");
+            sbInstance.DynamicKeys.Enable(DynamicKeyType.DK4, OnDividePress, @"Default\Images\DivideDK.png");
         }
 
         private void OnDividePress(object sender, System.EventArgs e)
